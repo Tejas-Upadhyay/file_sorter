@@ -2,7 +2,7 @@ import os
 import glob
 import shutil
 
-user = input("Do you want to move, delete, or copy? ")
+user = input("Do you want to move, delete, copy, or organize? ")
 
 if user == "copy":
     source = input("What is the name of the file(s) that you want to move? ")
@@ -26,8 +26,9 @@ elif user == "delete":
         print("What do you want to delete?")
         os.remove(input())
     elif typeDelete == "folder":
+        print("What do you want to delete?")
         os.removedirs(input())
-elif user == "Organizer":
+elif user == "organize":
     extensions = {
     "jpg": "images", "png": "images", "ico": "images", "gif": "images", "svg": "images", # images
     "sql": "sql", "sqlite3": "sql", # SQL
